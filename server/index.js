@@ -5,15 +5,12 @@ const PORT = 3000;
 
 app.use(express.static(path.resolve(__dirname, '..', 'client', 'dist')));
 
-app.get('/', (req, res) => {
-    res.send('hello');
+app.get('/apiTest', (req, res) => {
+    let num = Math.floor(Math.random()*500);
+    res.send(`hello, you just got a response from your app, number = ${num}`);
   });
 
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${[PORT]}`)
 })
-
-module.exports.subtraction = function(a, b) {
-    return a - b;
-}

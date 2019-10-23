@@ -1,5 +1,4 @@
 var assert = require('assert');
-var { subtraction } = require('../server/index.js');
 function addition(a, b) {
     return a + b;
 }
@@ -14,10 +13,5 @@ describe('Array', function() {
             assert.equal(addition(5,4), 9);
         })
     });
-    describe('subtraction', function() {
-        it('should subtract two numbers', function() {
-            assert.equal(subtraction(7,4), 3);
-        })
-    })
 });
 
